@@ -34,6 +34,10 @@ module Powerpoint
       @slides << Powerpoint::Slide::TextPicSplit.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
+    def add_two_picture_slide(title, image_path, image_path2)
+      @slides << Powerpoint::Slide::TwoPicture.new(presentation: self, title: title, image_path: image_path, image_path2: image_path2)
+    end
+
     def add_picture_description_slide(title, image_path, content = [])
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
